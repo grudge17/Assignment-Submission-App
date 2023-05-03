@@ -14,6 +14,17 @@ public class Assignment {
     private String codeReviewVideoUrl;
     @ManyToOne(optional = false)
     private User user;
+    
+    @ManyToOne
+    private User codeReviewer;
+    
+    
+	public User getCodeReviewer() {
+		return codeReviewer;
+	}
+	public void setCodeReviewer(User codeReviewer) {
+		this.codeReviewer = codeReviewer;
+	}
 	public Long getId() {
 		return id;
 	}
